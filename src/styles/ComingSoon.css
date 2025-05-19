@@ -1,0 +1,247 @@
+/* ComingSoon.css */
+.coming-soon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background decorations */
+.coming-soon-container::before {
+  content: '';
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  top: -10vw;
+  right: -10vw;
+  animation: float 15s infinite linear;
+}
+
+.coming-soon-container::after {
+  content: '';
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  bottom: -5vw;
+  left: -5vw;
+  animation: float 20s infinite linear reverse;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.coming-soon-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.coming-soon-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.coming-soon-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  min-width: 80px;
+}
+
+.countdown-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.subscribe-container {
+  margin-bottom: 30px;
+}
+
+.subscribe-container p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.subscribe-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  color: inherit;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.subscribe-form input::placeholder {
+  color: currentColor;
+  opacity: 0.6;
+}
+
+.subscribe-form button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-message {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .coming-soon-title {
+    font-size: 2.5rem;
+  }
+  
+  .coming-soon-subtitle {
+    font-size: 1rem;
+  }
+  
+  .countdown-value {
+    font-size: 1.8rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .countdown-item {
+    margin: 0 10px 20px;
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-content {
+    padding: 30px 20px;
+  }
+  
+  .coming-soon-title {
+    font-size: 2rem;
+  }
+  
+  .subscribe-form {
+    flex-direction: column;
+  }
+  
+  .subscribe-form input {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .subscribe-form button {
+    width: 100%;
+  }
+}

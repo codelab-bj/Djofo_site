@@ -1,0 +1,219 @@
+/* mission.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --indigo: #6366f1;
+  --blue: #3b82f6;
+  --green: #10b981;
+  --yellow: #f59e0b;
+  --dark: #111827;
+  --gray: #6b7280;
+  --light-gray: #f3f4f6;
+  --white: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+.mission-section {
+  padding: 5rem 0;
+  background-color: var(--light-gray);
+  background-image: 
+    radial-gradient(circle at 25% 15%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 75% 85%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--dark);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--indigo), var(--blue));
+  border-radius: 2px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mission-text {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--indigo), var(--blue));
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--gray);
+}
+
+.read-more-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--indigo);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.read-more-link:hover {
+  color: var(--blue);
+  transform: translateX(5px);
+}
+
+.icon-small {
+  width: 18px;
+  height: 18px;
+  margin-left: 0.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background-color: var(--white);
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.color-indigo::before { background-color: var(--indigo); }
+.color-blue::before { background-color: var(--blue); }
+.color-green::before { background-color: var(--green); }
+.color-yellow::before { background-color: var(--yellow); }
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-indigo .feature-icon { color: var(--indigo); background-color: rgba(99, 102, 241, 0.1); }
+.color-blue .feature-icon { color: var(--blue); background-color: rgba(59, 130, 246, 0.1); }
+.color-green .feature-icon { color: var(--green); background-color: rgba(16, 185, 129, 0.1); }
+.color-yellow .feature-icon { color: var(--yellow); background-color: rgba(245, 158, 11, 0.1); }
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-text {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .mission-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-text,
+  .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
