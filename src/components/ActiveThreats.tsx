@@ -1,5 +1,5 @@
 import {AlertTriangle} from 'lucide-react';
-import "../styles/style.css"
+import "../styles/threat.css"
 
 const ActivityThreat = () => {
 

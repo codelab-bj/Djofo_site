@@ -136,64 +136,7 @@ section {
   box-shadow: var(--shadow-md);
 }
 
-/* Threats Section Styles */
-.threats-section {
-  background-color: var(--white);
-}
 
-.threats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-xl);
-}
-
-.threat-card {
-  background-color: var(--gray-light);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.threat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.threat-content {
-  padding: var(--spacing-lg);
-  display: flex;
-  gap: var(--spacing-md);
-}
-
-.threat-icon {
-  display: flex;
-  align-items: flex-start;
-  color: var(--warning-color);
-  font-size: 1.5rem;
-}
-
-.icon-warning {
-  width: 28px;
-  height: 28px;
-  stroke-width: 2px;
-}
-
-.threat-body {
-  flex: 1;
-}
-
-.threat-title {
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-sm);
-  color: var(--dark);
-}
-
-.threat-description {
-  color: var(--gray-dark);
-  font-size: var(--font-size-md);
-}
 
 /* Community Section Styles */
 .community-section {

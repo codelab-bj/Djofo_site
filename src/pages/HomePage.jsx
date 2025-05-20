@@ -1197,7 +1197,6 @@ import Training from '../components/Training.tsx'
 import Community from '../components/Community.tsx'
 import Partners from '../components/Partners.tsx'
 import Footer from '../components/Footer.tsx'
-import ComingSoon from "../components/ComingSoon.tsx";
 
 
 export default function CyberSecurityHomepage() {
@@ -1225,8 +1224,6 @@ export default function CyberSecurityHomepage() {
         {/* Categories Section */}
         <Categories />
         
-
-        <ComingSoon/>
 
         {/* Training Section */}
         {/* <Training /> */}

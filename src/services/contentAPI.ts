@@ -1,6 +1,7 @@
 // src/services/contentAPI.ts
 import axios from 'axios';
 
+
 // Define our content item type
 export interface ContentItem {
   id: number;
@@ -16,10 +17,10 @@ export interface ContentItem {
 }
 
 // News API key - replace with your own from https://newsapi.org
-const NEWS_API_KEY = 'ea6595fe0bd84634811ffc4b89dede9d';
+const NEWS_API_KEY = process.env.REACT_APP_NEWS_API_KEY;
 
 // Gnews API key - alternative option, replace with your own from https://gnews.io
-const GNEWS_API_KEY = '41cdfc791e756169227c3347249304ab';
+const GNEWS_API_KEY = process.env.REACT_APP_GNEWS_API_KEY;
 
 // Secondary fallback if needed - RSS feed proxy
 const RSS_FEED_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https://feeds.feedburner.com/TheHackersNews&api_key=vd4ttnljfxrfwz5cjtbqqyp9avqs0ksnlwcrdbej';
